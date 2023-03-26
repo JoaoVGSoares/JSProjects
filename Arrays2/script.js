@@ -27,4 +27,9 @@ const comment = comments.find((comment) => comment.id === 2039842);
 //Finds the index of the first comment in the comments array with a specific id
 const index = comments.findIndex((comment) => comment.id === 123523);
 
+//Creates a new array while excluding the comment in the specified index
+const newComments = [...comments.slice(0, index), ...comments.slice(index + 1)];
+
 console.log({ isAdult, allAdults, comment, index });
+
+console.table(newComments);
